@@ -17,6 +17,7 @@
 <body>
 	<?php include "./src/layouts/header_layout.php"?>
 	<!-- TODO: read link and insert corresponding layout -->
+	<?php include "./src/layouts/product_layout.php"?>
 	<?php include "./src/layouts/footer_layout.php"?>
 
 	<!-- JavaScript -->
