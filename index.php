@@ -19,8 +19,10 @@
 
 		<?php include "./src/layouts/header_layout.php"; ?>
 
-		<!-- TODO: read link and insert corresponding layout -->
-		<?php include "./src/layouts/XXX_layout.php"; ?>
+		<div class="main">
+			<!-- TODO: read link and insert corresponding layout -->
+			<?php include "./src/layouts/XXX_layout.php"; ?>
+		</div>
 
 		<?php include "./src/layouts/footer_layout.php"; ?>
 
