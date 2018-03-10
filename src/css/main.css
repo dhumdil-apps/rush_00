@@ -13,3 +13,16 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+
+.layout-row {
+    display: flex;
+}
+
+.layout-column {
+    display: flex;
+    flex-direction: column;
+}
+    
+.flex {
+    flex: 1;
+}
