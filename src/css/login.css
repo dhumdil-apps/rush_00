@@ -1,32 +1,36 @@
-.form .input {
-	 font-size: 24px;
-	 margin: 10px 0;
+.login {
+	display: flex;
+	height: 100%;
 }
-.form .input > input {
-	 width: 320px;
-	 height: 40px;
-	 outline: none;
-	 border: 1px solid #ddd;
-	 font-size: 20px;
-	 padding: 5px;
-	 margin: 0 5px;
+.login .form .input {
+	font-size: 24px;
+	margin: 10px 0;
 }
-.form .input > label {
-	 margin: auto 5px;
+.login .form .input > input {
+	width: 320px;
+	height: 40px;
+	outline: none;
+	border: 1px solid #ddd;
+	font-size: 20px;
+	padding: 5px;
+	margin: 0 5px;
 }
-.form .invalid-input > input {
-	 border: 1px solid rgba(200, 0, 0, .5);
+.login .form .input > label {
+	margin: auto 5px;
 }
-.form .err {
-	 font-size: 16px;
-	 color: rgba(200, 0, 0, .5);
+.login .form .invalid-input > input {
+	border: 1px solid rgba(200, 0, 0, .5);
 }
-.form .txt {
-	 font-size: 16px;
-	 color: #aaa;
-	 margin: 20px 0;
+.login .form .err {
+	font-size: 16px;
+	color: rgba(200, 0, 0, .5);
 }
- .form .txt > .p {
-	 width: 320px;
-	 margin: auto 5px;
+.login .form .txt {
+	font-size: 16px;
+	color: #aaa;
+	margin: 20px 0;
+}
+.login .form .txt > .p {
+	width: 320px;
+	margin: auto 5px;
 }

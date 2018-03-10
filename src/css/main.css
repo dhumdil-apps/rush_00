@@ -18,16 +18,16 @@ html, body {
 	 position: relative;
 	 height: 100px;
 }
-
 .layout-row {
-    display: flex;
+	display: flex;
 }
-
 .layout-column {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
-    
+.layout-center {
+	margin: auto;
+}
 .flex {
-    flex: 1;
+	flex: 1;
 }
