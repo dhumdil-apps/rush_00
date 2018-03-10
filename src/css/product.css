@@ -1,0 +1,23 @@
+.product {
+    height: 100%;
+    width: 100%;
+}
+
+.picture {
+   margin: auto;
+   padding: 15vw;
+}
+
+.information {
+    padding-right: 5vw;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.product-price {
+    padding: 5vw;
+    font-size: 7vw;
+}
