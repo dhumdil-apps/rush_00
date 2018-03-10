@@ -1,2 +1,3 @@
-
-<!-- <form id="logout-form" action="/logout" method="POST" style="display: none;"></form> -->
+<div class="header layout-row">
+	<div class="title">Lorem ipsum dolor sit amet</div>
+</div>
