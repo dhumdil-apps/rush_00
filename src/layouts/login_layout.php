@@ -1,5 +1,5 @@
 <div class="login">
-	<form id="form" class="form" class="layout-column" method="POST" action="/src/php/login.php">
+	<form id="form" class="form layout-center" class="layout-column" method="POST" action="/src/php/login.php">
 
 		<div class="layout-row txt">
 			<div class="flex"></div>

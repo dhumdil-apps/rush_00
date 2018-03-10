@@ -1,6 +1,5 @@
 .login {
 	display: flex;
-	height: 100%;
 }
 .login .form .input {
 	font-size: 24px;
