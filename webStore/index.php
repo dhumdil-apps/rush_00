@@ -12,6 +12,6 @@
         <input type="password" name="pwd" placeholder="Password"><br>
         <button type="submit">Login</button>
     </form>
-    <a href="./pages/createAccount.php">Create Account here</a>
+    <a href="./pages/htmlPages/createAccount.php">Create Account here</a>
 </body>
 </html>
