@@ -15,10 +15,16 @@
 	<?php include "./src/includes/links.php"?>
 </head>
 <body>
-	<?php include "./src/layouts/header_layout.php"?>
-	<!-- TODO: read link and insert corresponding layout -->
-	<?php include "./src/layouts/product_layout.php"?>
-	<?php include "./src/layouts/footer_layout.php"?>
+	<div class="page">
+
+		<?php include "./src/layouts/header_layout.php"; ?>
+
+		<!-- TODO: read link and insert corresponding layout -->
+		<?php include "./src/layouts/%%%_layout.php"; ?>
+		
+		<?php include "./src/layouts/footer_layout.php"; ?>
+
+    </div>
 
 	<!-- JavaScript -->
 	<?php include "./src/includes/scripts.php"?>
