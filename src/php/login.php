@@ -92,6 +92,7 @@
 		}
 		if ($email_is_ok && $password_is_ok)
 		{
-			
+			// $_SESSION['id'] = 
+			var_dump($sql);
 		}
 	}

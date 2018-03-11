@@ -1,13 +1,6 @@
 <?php
 (@ $config = include_once 'config.php') or die ("There was a problem with you config file. Check it and try again");
 $config = json_decode($config,TRUE);
-var_dump($config);
-
-
-// $config['hostname'] = getenv('DATABASE_HOST');
-// $config['username'] = getenv('DATABASE_USERNAME');
-// $config['password'] = getenv('DATABASE_PASSWORD');
-// $config['database'] = getenv('DATABASE_NAME');
 
 var_dump($config);
 
@@ -33,7 +26,7 @@ if (isset($config['hostname'])) {
   }
 
   if($_SERVER["REQUEST_METHOD"]=="POST"){
-    
+
     // echo "<pre>";
     // var_dump($_POST);
     // echo "</pre>";
@@ -43,15 +36,15 @@ if (isset($config['hostname'])) {
         exit("No files in MySql Directory");
     }
     create_database($_POST["hostname"],$_POST["username"],$_POST["password"], $_POST["database"]);
-    
-    
+
+
     $connection = mysqli_connect($_POST["hostname"],$_POST["username"],$_POST["password"],$_POST["database"]);
     echo("<pre><br><br><br><br><br><br>");
     var_dump($connection);
     echo("</pre><br><br><br><br><br><br>");
-    
-    
-    
+
+
+
     foreach($files as $file){
         $SQL = file_get_contents("MySQL/".$file);
         var_dump($SQL);
@@ -71,7 +64,7 @@ if (isset($config['hostname'])) {
     function create_database($hostname, $username, $password, $database){
         // connect to the MySQL server
         $conn = new mysqli($hostname, $username, $password);
-    
+
         // check connection
         if (mysqli_connect_errno()) {
             exit('Connect failed: '. mysqli_connect_error());
@@ -80,7 +73,7 @@ if (isset($config['hostname'])) {
 
         // sql query with CREATE DATABASE
         $sql = "CREATE DATABASE `".$database."` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
-    
+
         // Performs the $sql query on the server to create the database
         if ($conn->query($sql) === TRUE) {
             return(TRUE);
