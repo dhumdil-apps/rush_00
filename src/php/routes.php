@@ -1,9 +1,5 @@
 <?php
 	
-	var_dump($_SERVER["SCRIPT_FILENAME"]) ;
-
-	
-
 	$url = $_SERVER['REQUEST_URI'];
 	$file_path = $_SERVER['SCRIPT_FILENAME'];
 	$pattern = '/(.*)('. preg_replace('/(\/)/', '\/', $url) .')/';
@@ -17,6 +13,7 @@
 	}
 
 	// API
+	var_dump($url);
 	$layout = '';
 
 	switch ($url)
