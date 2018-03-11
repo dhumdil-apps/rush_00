@@ -12,8 +12,6 @@
 		$url = preg_replace($pattern, '/', $file_path);
 	}
 
-	var_dump($url);
-
 	// API
 	$layout = '';
 
