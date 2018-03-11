@@ -1,73 +1,72 @@
 <?php
 
-	$layout = '';
-	$route = '/';
+	$url = '';
 
-	if (isset($_POST['route']))
+	if (isset($_GET['url']))
 	{
-		$route = '/'.$_POST['route'];
+		$url = $_GET['url'];
 	}
 
 	// API
-	switch ($route)
+	switch ($url)
 	{
 
 		// Categories
-		case '/':
+		case '':
 			$layout = './src/layouts/categories_layout.php';
 			require('./src/php/categories.php');
 			break;
 
 		// List of Products
-		case '/products':
-			$layout = './src/layouts/products_layout.php';
-			require('./src/php/products.php');
+		case 'products':
+			$layout = './src/layouts/product-list_layout.php';
+			require('./src/php/product-list.php');
 			break;
 
 		// Product Information
-		case '/product':
+		case 'product':
 			$layout = './src/layouts/product_layout.php';
 			require('./src/php/product.php');
 			break;
 
 		// Cart
-		case '/cart':
+		case 'cart':
 			$layout = './src/layouts/cart_layout.php';
 			require('./src/php/cart.php');
 			break;
 
 		// User Profile
-		case '/profile':
+		case 'profile':
 			$layout = './src/layouts/profile_layout.php';
 			require('./src/php/profile.php');
 			break;
 
 		// Invoice History
-		case '/invoice-history':
+		case 'invoice-history':
 		$layout = './src/layouts/invoice-history_layout.php';
 			require('./src/php/invoice-history.php');
 			break;
 
 		// Edit Profile
-		case '/edit-profile':
+		case 'edit-profile':
 			$layout = './src/layouts/edit-profile_layout.php';
 			require('./src/php/edit-profile.php');
 			break;
 
 		// Login
-		case '/login':
+		case 'login':
 			$layout = './src/layouts/login_layout.php';
 			require('./src/php/login.php');
 			break;
 
 		// Register
-		case '/register':
+		case 'register':
 			$layout = './src/layouts/register_layout.php';
 			require('./src/php/register.php');
 			break;
 
 		// Logout - index.php (categories)
-		case '/logout':
+		case 'logout':
 			require('./src/php/logout.php');
 			break;
 
