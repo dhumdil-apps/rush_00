@@ -1,0 +1,40 @@
+.btn {
+	display: flex;
+	height: 5vh;
+	width: 10vw;
+	margin: auto 20vw;
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+.btn > span {
+	margin: auto;
+}
+.btn.green {
+	color: rgba(0, 150, 0, .75);
+}
+.btn.green:hover {
+	background: rgba(0, 150, 0, .75);
+	color: #fff;
+}
+.btn.red {
+	color: rgba(200, 0, 0, .75);
+}
+.btn.red:hover {
+	background: rgba(200, 0, 0, 0.75);
+	color: #fff;
+}
+.btn.submit {
+	font-size: 24px;
+	width: 320px;
+	height: 40px;
+	margin: 20px 5px;
+	padding: 5px 20px;
+	border-radius: 30px;
+	background: #fafafa;
+}
+.btn.submit:hover {
+	color: #000;
+	transition: all 100ms ease-in-out;
+	background: #fff;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

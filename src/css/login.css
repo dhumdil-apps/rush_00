@@ -1,0 +1,43 @@
+.login {
+	display: flex;
+	margin: auto;
+}
+.login .form .input {
+	font-size: 24px;
+	margin: 10px 0;
+}
+.login .form .input > input {
+	width: 320px;
+	height: 40px;
+	outline: none;
+	border: 1px solid #ddd;
+	font-size: 20px;
+	padding: 5px 20px;
+	margin: 0 5px;
+	text-align: center;
+}
+.login .form .input > input:focus {
+	border: 1px solid #bbb;
+}
+.login .form .input > label {
+	margin: auto 5px;
+}
+.login .form .input .password {
+	letter-spacing: 10px;
+}
+.login .form .invalid-input > input {
+	border: 1px solid rgba(200, 0, 0, .5);
+}
+.login .form .err {
+	font-size: 16px;
+	color: rgba(200, 0, 0, .5);
+}
+.login .form .txt {
+	font-size: 16px;
+	color: #aaa;
+	margin: 20px 0;
+}
+.login .form .txt > .p {
+	width: 320px;
+	margin: auto 5px;
+}
