@@ -1,16 +1,14 @@
-<h1>PROFILE</h1>
-<div class="container">
+<div class="container layout-row">
     <div class="profile-menu">
-        <div class="btn">Personal Data</div>
-        <div class="btn">Modify Data</div>
-        <div class="btn">History</div>
+        <div class="btn-p layout-row"><span class="layout-center">Personal Data</span></div>
+        <div class="btn-p layout-row"><span class="layout-center">Modify Data</span></div>
+        <div class="btn-p layout-row"><span class="layout-center">History</span></div>
     </div>
-    <div = class="sub-container">
-        <div class="info">
-            <div class="data">%varData%</div>
-            <div class="data">%varPrie</div>
+    <div = class="sub-container layout-column">
+        <div class="info layout-row">
+            <div class="data layout-center"><span>%varData%</span></div>
+            <div class="price layout-center"><span>%varPrie</span></div>
         </div>
-        <div class="invoiceHistory">%History%</div>
-    </date>
+    </div>
 
 </div>

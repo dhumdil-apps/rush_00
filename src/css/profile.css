@@ -1,0 +1,54 @@
+.container{
+    width: 100%;
+}
+.profile-menu{
+    height: 100%;
+    width: 21vw;
+    margin-left: 0px;
+    border-right: solid 1px salmon;
+}
+
+.btn-p{
+    text-align: center;
+    font-size: 16px;
+	width: 15vw;
+	height: 40px;
+	margin: 5px 5px;
+	padding: 5px 20px;
+	background: #fafafa;
+}
+
+.btn-p:hover {
+	color: #000;
+	transition: all 100ms ease-in-out;
+	background: #fff;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.sub-container{
+    width: 70vw;
+}
+.info{
+    margin: 20px;
+    border: solid 1px grey;
+    height: 20vh;
+    width: 100%;
+    float: right;
+}
+
+.data{
+    margin: auto;
+}
+
+.price{
+    margin: auto;
+}
+
+.invoice-history{
+
+    text-align: center;
+    height: 10vh;
+    width: 70vw;
+    margin-left: 5vw;
+    border: solid 1px salmon;
+ }
