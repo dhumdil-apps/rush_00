@@ -1,12 +1,26 @@
 <?php
 
+<<<<<<< HEAD
 	if (isset($_POST['route']))
+=======
+	$layout = '';
+	$url = $_SERVER['REQUEST_URI'];
+	$file_path = $_SERVER['SCRIPT_FILENAME'];
+	$pattern = '/(.*)('. preg_replace('/(\/)/', '\/', $url) .')/';
+
+	// Redirect current path to root (Remove current path from route)
+	preg_match($pattern, $file_path, $matches);
+
+	if (isset($matches[0]))
+>>>>>>> 03072e1fa848e56afe27e81a48dd4aefc8b1e17a
 	{
-		$route = '/'.$_POST['route'];
+		$url = preg_replace($pattern, '/', $file_path);
 	}
 
+	var_dump($url);
+
 	// API
-	switch ($route)
+	switch ($url)
 	{
 
 		// Categories
