@@ -1,5 +1,4 @@
 <form id="form" method="GET" action="index.php">
-
 	<input id="url" class="hidden" type="text" name="url" value="">
 	<input id="id" class="hidden" type="text" name="category" value="">
 

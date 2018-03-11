@@ -1,12 +1,12 @@
 <div class="login">
-	<form id="form" class="form layout-center" class="layout-column" method="POST" action="/src/php/login.php">
+	<form id="form" class="form layout-center" class="layout-column" method="POST" action="index.php" autocomplete="off">
 
 		<div class="space"></div>
 
 		<div class="layout-row input <?php echo (isset($errors['email'])) ? 'invalid-input' : '';  ?>">
 			<div class="flex"></div>
 			<label for="email">Email:</label>
-			<input id="email" type="email" name="email" value="<?php echo (isset($_SESSION['email'])) ? $_SESSION['email'] : ''; ?>" required autofocus onkeydown="submitForm(event, 'keyboard')">
+			<input id="email" type="email" name="email" value="<?php echo (isset($_SESSION['email'])) ? $_SESSION['email'] : ''; ?>" required autofocus onkeydown="submitForm(event, 'keyboard')" autocomplete="off">
 		</div>
 
 		<?php if (isset($errors['email'])) { ?>
@@ -19,7 +19,7 @@
 		<div class="layout-row input <?php echo (isset($errors['password'])) ? 'invalid-input' : '';  ?>">
 			<div class="flex"></div>
 			<label for="password">Password:</label>
-			<input id="password" class="password" type="password" name="password" required onkeydown="submitForm(event, 'keyboard')">
+			<input id="password" class="password" type="password" name="password" required onkeydown="submitForm(event, 'keyboard')" autocomplete="off">
 		</div>
 
 		<?php if (isset($errors['password'])) { ?>
