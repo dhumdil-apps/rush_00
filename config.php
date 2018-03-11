@@ -6,4 +6,4 @@
 	$database = "rush00";
 	$environment = "debug";  // debug, production
 
-	return '{"hostname":"'.$host.'","username":"'.$username.'","password":"'.$password.'","database":"'.$database.'"}';
+	return '{"hostname":"'.$host.'","username":"'.$username.'","password":"'.$password.'","database":"'.$database.'","environment":"'.$environment.'"}';
