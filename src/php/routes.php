@@ -1,7 +1,6 @@
 <?php
 
 	$url = $_SERVER['REQUEST_URI'];
-	$layout = '';
 
 	// Redirect 'base_urls' to root
 	$base_urls = array('htdocs');
@@ -25,6 +24,9 @@
 	{
 		$url = '/';
 	}
+
+	// API
+	$layout = '';
 
 	switch ($url)
 	{
