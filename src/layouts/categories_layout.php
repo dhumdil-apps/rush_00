@@ -1,32 +1,20 @@
-<<<<<<< HEAD
-<h1>CATEGORIES</h1>
-<div class="container">
-    <div class="product-cat">%productCat%<div>
-</div>
-=======
-<div>
+<form id="form" method="GET" action="index.php">
+
+	<input id="url" class="hidden" type="text" name="url" value="">
+	<input id="id" class="hidden" type="text" name="category" value="">
+
 	<div>
-		<a href="/products">
+		<div onclick="submitForm(event, 'mouse', 'products', 'category1')">
 			<h1>CATEGORY 1</h1>
-		</a>
-	</div>
-
-	<div>
-		<a href="/products">
+		</div>
+		<div onclick="submitForm(event, 'mouse', 'products', 'category2')">
 			<h1>CATEGORY 2</h1>
-		</a>
-	</div>
-
-	<div>
-		<a href="/products">
+		</div>
+		<div onclick="submitForm(event, 'mouse', 'products', 'category3')">
 			<h1>CATEGORY 3</h1>
-		</a>
-	</div>
-
-	<div>
-		<a href="/products">
+		</div>
+		<div onclick="submitForm(event, 'mouse', 'products', 'category4')">
 			<h1>CATEGORY 4</h1>
-		</a>
+		</div>
 	</div>
-</div>
->>>>>>> 03072e1fa848e56afe27e81a48dd4aefc8b1e17a
+</form>

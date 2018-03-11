@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php require('./src/includes/header.php'); ?>
+	<?php require('./src/includes/head.php'); ?>
 
 	<!-- Styles -->
 	<?php require('./src/includes/links.php'); ?>

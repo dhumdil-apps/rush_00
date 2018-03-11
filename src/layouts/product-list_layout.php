@@ -1,19 +1,21 @@
-<<<<<<< HEAD:src/layouts/product-list_layout.php
-<h1>PRODUCTS</h1>
-=======
-<a href="/product">
-	<h1>PRODUCT</h1>
-</a>
+<form id="form" method="GET" action="index.php">
 
-<a href="/product">
-	<h1>PRODUCT</h1>
-</a>
+	<input id="url" class="hidden" type="text" name="url" value="">
+	<input id="id" class="hidden" type="text" name="category" value="">
 
-<a href="/product">
-	<h1>PRODUCT</h1>
-</a>
+	<div>
+		<div onclick="submitForm(event, 'mouse', 'product', 'product1')">
+			<h1>Product 1</h1>
+		</div>
+		<div onclick="submitForm(event, 'mouse', 'product', 'product2')">
+			<h1>Product 2</h1>
+		</div>
+		<div onclick="submitForm(event, 'mouse', 'product', 'product3')">
+			<h1>Product 3</h1>
+		</div>
+		<div onclick="submitForm(event, 'mouse', 'product', 'product4')">
+			<h1>Product 4</h1>
+		</div>
+	</div>
 
-<a href="/product">
-	<h1>PRODUCT</h1>
-</a>
->>>>>>> 03072e1fa848e56afe27e81a48dd4aefc8b1e17a:src/layouts/products_layout.php
+</form>
