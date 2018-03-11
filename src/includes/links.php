@@ -5,3 +5,6 @@
 <link href="src/css/product.css" type="text/css" rel="stylesheet">
 <link href="src/css/btn.css" type="text/css" rel="stylesheet">
 <link href="src/css/profile.css" type="text/css" rel="stylesheet">
+<link href="src/css/categories.css" type="text/css" rel="stylesheet">
+<link href="src/css/cart.css" type="text/css" rel="stylesheet">
+<link href="src/css/edit-profile.css" type="text/css" rel="stylesheet">

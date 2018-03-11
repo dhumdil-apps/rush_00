@@ -40,3 +40,9 @@ html, body {
 input.hidden {
 	display: none;
 }
+
+.title-page{
+	font-family:"JHON";
+	font-size: 7vh;
+	margin: 25px;
+}

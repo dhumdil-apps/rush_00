@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Joe";
+    src: url(../fonts/Joe.otf);
+}
+
+@font-face {
+    font-family: "Jhon";
+    src: url(../fonts/JOHN.otf);
+}
+
+.main-container{
+    width: 100%;
+    margin: 50px;
+}
+.items{
+    font-size: 5vh;
+}
+
+.item{
+    cursor: pointer;
+    font-family: 'Joe';
+    padding: 20px;
+    margin: 20px;
+    border: solid 1px black;
+}
+
+.item:hover{
+    font-family: "Jhon";
+    color: #000;
+    transition: all 100ms ease-in-out;
+	background: #fff;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
