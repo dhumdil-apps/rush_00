@@ -1,12 +1,7 @@
 <?php
 
 	$layout = '';
-	$url = '';
-
-	if (isset($_GET['url']))
-	{
-		$url = $_GET['url'];
-	}
+	$url = (isset($_GET['url'])) ? $_GET['url'] : ((isset($_POST['url'])) ? $_POST['url'] : '');
 
 	// API
 	switch ($url)
