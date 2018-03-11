@@ -1,37 +1,32 @@
 <?php
 
 	$url = $_SERVER['REQUEST_URI'];
+	$file_path = $_SERVER['SCRIPT_FILENAME'];
+	$pattern = '/(.*)('. preg_replace('/(\/)/', '\/', $url) .')/';
 
-	// Redirect 'base_urls' to root
-	$base_urls = array('htdocs');
+	// Redirect current path to root (Remove current path from route)
+	preg_match($pattern, $file_path, $matches);
 
-	// Find 'base_urls' and remove them from the main route
-	foreach ($base_urls as $key => $value)
+	if (isset($matches[0]))
 	{
-		preg_match('/(.*)(\/'. $value .')/', $url, $matches);
-
-		if (isset($matches[0]))
-		{
-			if ($matches[0] == '/'.$value)
-			{
-				$url = preg_replace('/(.*)(\/'. $value .')/', '', $url);
-			}
-		}
+		$url = preg_replace($pattern, '/', $file_path);
 	}
 
-	// If empty, add '/'
-	if ($url == '')
-	{
-		$url = '/';
-	}
+	var_dump($url);
 
 	// API
 	$layout = '';
 
 	switch ($url)
 	{
-		// Categories
+
 		case '/':
+			$layout = './src/layouts/categories_layout.php';
+			require('./src/php/categories.php');
+			break;
+
+		// Categories
+		case '/index.php':
 			$layout = './src/layouts/categories_layout.php';
 			require('./src/php/categories.php');
 			break;
