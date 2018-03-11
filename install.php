@@ -3,6 +3,14 @@
 $config = json_decode($config,TRUE);
 var_dump($config);
 
+
+// $config['hostname'] = getenv('DATABASE_HOST');
+// $config['username'] = getenv('DATABASE_USERNAME');
+// $config['password'] = getenv('DATABASE_PASSWORD');
+// $config['database'] = getenv('DATABASE_NAME');
+
+var_dump($config);
+
 if (isset($config['hostname'])) {
     $hn = "value = '".$config['hostname']."'";
   } else {
