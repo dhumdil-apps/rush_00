@@ -3,7 +3,6 @@
 	$url = $_SERVER['REQUEST_URI'];
 	$layout = '';
 
-<<<<<<< HEAD
 	// Redirect 'base_urls' to root
 	$base_urls = array('htdocs');
 
@@ -27,8 +26,6 @@
 		$url = '/';
 	}
 
-=======
->>>>>>> 83a6e6180ccdd06469bd02249d1e0a1499c4c60a
 	switch ($url)
 	{
 		// Categories
