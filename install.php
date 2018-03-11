@@ -1,7 +1,7 @@
 <?php
 (@ $config = include_once 'config.php') or die ("There was a problem with you config file. Check it and try again");
 $config = json_decode($config,TRUE);
-// var_dump($config);
+var_dump($config);
 
 if (isset($config['hostname'])) {
     $hn = "value = '".$config['hostname']."'";
@@ -35,13 +35,20 @@ if (isset($config['hostname'])) {
         exit("No files in MySql Directory");
     }
     create_database($_POST["hostname"],$_POST["username"],$_POST["password"], $_POST["database"]);
-    $connection = mysqli_connect($config["hostname"],$config["username"],$config["password"],$config["database"]);
-
+    
+    
+    $connection = mysqli_connect($_POST["hostname"],$_POST["username"],$_POST["password"],$_POST["database"]);
+    echo("<pre><br><br><br><br><br><br>");
+    var_dump($connection);
+    echo("</pre><br><br><br><br><br><br>");
+    
+    
+    
     foreach($files as $file){
         $SQL = file_get_contents("MySQL/".$file);
-        // var_dump($SQL);
+        var_dump($SQL);
         $result = mysqli_query($connection,$SQL);
-        // var_dump($result);
+        var_dump($result);
         if($result){
             echo $file." Installed <br><br>";
         } else {
