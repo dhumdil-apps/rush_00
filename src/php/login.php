@@ -27,7 +27,7 @@
 
 			if ($result)
 			{
-				$ok = 1;
+				// $ok = 1;
 				var_dump($result);
 			}
 

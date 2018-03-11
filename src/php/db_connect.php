@@ -1,11 +1,6 @@
 <?php
 
-	$host = getenv('DATABASE_HOST');
-	$username = getenv('DATABASE_USERNAME');
-	$password = getenv('DATABASE_PASSWORD');
-	$database = getenv('DATABASE_NAME');
-
-	$link = mysqli_connect($host, $username, $password, $database);
+	$link = mysqli_connect($_SESSION['db_hostname'], $_SESSION['db_username'], $_SESSION['db_password'], $_SESSION['db_database']);
 
 	if (getenv("environment") == 'debug' && !$link)
 	{
@@ -17,7 +12,7 @@
 
 	function sqlQuery($query)
 	{
-		$link = mysqli_connect($host, $username, $password, $database);
+		$link = mysqli_connect($_SESSION['db_hostname'], $_SESSION['db_username'], $_SESSION['db_password'], $_SESSION['db_database']);
 
 		if (getenv("environment") == 'debug' && !$link)
 		{
@@ -52,7 +47,7 @@
 	}
 
 	// UPDATE USERS
-	// un query normal e de "SET name='nume', email='emailul', address='adresa', phone='telefon' 
+	// un query normal e de "SET name='nume', email='emailul', address='adresa', phone='telefon'
 	function updateUser($email, $q){
 		$query = "UPDATE users ".$q." WHERE users.email like '".$email."'";
 		$rez = sqlQuery($query);
@@ -61,7 +56,7 @@
 			return($rez);
 		}
 	}
-	
+
 	// DELETE USERS
 	function removeUserByEmail($email) {
 		$query = "DELETE FROM users WHERE users.email like '".$email."'";
@@ -73,7 +68,7 @@
 	}
 
 	// PODUCTS
-	
+
 	// CREATE PRODUCTS
 	function addProduct($name, $catId, $stock, $price, $description, $img) {
 		$query = "INSERT INTO products (name, catId, stock, price, description, picture) VALUES ('".$name."', '".$catId."', '".$stock."', '".$price."', '".$description."', '".$img."');";
@@ -95,7 +90,7 @@
 	}
 
 	// // UPDATE USERS
-	// // un query normal e de "SET name='nume', email='emailul', address='adresa', phone='telefon' 
+	// // un query normal e de "SET name='nume', email='emailul', address='adresa', phone='telefon'
 	// function updateUser($email, $q){
 
 
@@ -105,7 +100,7 @@
 	// 		return($rez);
 	// 	}
 	// }
-	
+
 	// // DELETE USERS
 	// function removeUserByEmail($email) {
 
@@ -116,4 +111,3 @@
 	// 		return($rez);
 	// 	}
 	// }
-
