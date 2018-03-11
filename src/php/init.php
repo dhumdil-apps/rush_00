@@ -6,13 +6,12 @@
 	$_ENV['username']=$config['username'];
 	$_ENV['password']=$config['password'];
 	$_ENV['database']=$config['database'];
-	
-	if ($environment == 'debug')
+	$_ENV['environment'] = $config['environment'];
+
+	if (getenv('environment') == 'debug')
 	{
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 	}
-
-	
 
 	require('./src/php/routes.php');
