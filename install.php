@@ -1,6 +1,5 @@
 <?php
 (@ $config = include_once 'config.php') or die ("There was a problem with you config file. Check it and try again");
-// var_dump($config);
 $config = json_decode($config,TRUE);
 // var_dump($config);
 
