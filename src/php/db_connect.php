@@ -41,6 +41,6 @@
 	}
 
 	function removeUserByEmail($email) {
-		$query = "DELETE FROM users WHERE users.email like ".$email;
-		
+		$query = "DELETE FROM users WHERE users.email like '".$email."'";
+
 	}
