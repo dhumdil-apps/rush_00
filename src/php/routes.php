@@ -1,5 +1,6 @@
 <?php
 
+	$layout = '';
 	$url = '';
 
 	if (isset($_GET['url']))
