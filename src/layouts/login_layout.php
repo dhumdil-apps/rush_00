@@ -4,29 +4,29 @@
 		<input id="url" class="hidden" type="text" name="url" value="login">
 		<div class="space"></div>
 
-		<div class="layout-row input <?php echo (isset($errors['email'])) ? 'invalid-input' : '';  ?>">
+		<div class="layout-row input <?php echo (isset($login_errors['email'])) ? 'invalid-input' : '';  ?>">
 			<div class="flex"></div>
 			<label for="email">Email:</label>
 			<input id="email" type="email" name="email" value="<?php echo (isset($_SESSION['email'])) ? $_SESSION['email'] : ''; ?>" required autofocus>
 		</div>
 
-		<?php if (isset($errors['email'])) { ?>
+		<?php if (isset($login_errors['email'])) { ?>
 			<div class="layout-row input err">
 				<div class="flex"></div>
-				<span><?php echo $errors['email'][0]; ?></span>
+				<span><?php echo $login_errors['email']; ?></span>
 			</div>
 		<?php } ?>
 
-		<div class="layout-row input <?php echo (isset($errors['password'])) ? 'invalid-input' : '';  ?>">
+		<div class="layout-row input <?php echo (isset($login_errors['password'])) ? 'invalid-input' : '';  ?>">
 			<div class="flex"></div>
 			<label for="password">Password:</label>
 			<input id="password" class="password" type="password" name="password" required>
 		</div>
 
-		<?php if (isset($errors['password'])) { ?>
+		<?php if (isset($login_errors['password'])) { ?>
 			<div class="layout-row input err">
 				<div class="flex"></div>
-				<span><?php echo $errors['password'][0]; ?></span>
+				<span><?php echo $login_errors['password']; ?></span>
 			</div>
 		<?php } ?>
 
