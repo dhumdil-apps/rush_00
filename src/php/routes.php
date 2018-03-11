@@ -7,6 +7,8 @@
 		$url = $_GET['url'];
 	}
 
+	var_dump($url);
+
 	// API
 	switch ($url)
 	{
