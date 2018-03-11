@@ -1,4 +1,7 @@
-<?php require('./src/php/init.php'); ?>
+<?php
+	session_start();
+	require('./src/php/init.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
