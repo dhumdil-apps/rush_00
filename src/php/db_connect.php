@@ -87,8 +87,6 @@
 
 	// READ PRODUCTS
 	function queryProductById($product) {
-
-
 		$rez = sqlQuery($query);
 		if(!$rez) {
 			$rez = "no users added";
