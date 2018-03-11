@@ -25,10 +25,9 @@
 			$sql = "SELECT id FROM users WHERE email='$email'";
 			$result = sqlQuery($sql);
 
-			if ($result)
+			if (count(mysqli_fetch_all($result)) > 0)
 			{
-				// $ok = 1;
-				var_dump($result);
+				$ok = 1;
 			}
 
 			if ($ok)

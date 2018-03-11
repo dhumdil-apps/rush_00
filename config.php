@@ -4,6 +4,6 @@
 	$username = "root";
 	$password = "";
 	$database = "ft_minishop";
-	$environment = "debug";  // debug, production
+	$environment = "debug";
 
 	return '{"hostname":"'.$host.'","username":"'.$username.'","password":"'.$password.'","database":"'.$database.'","environment":"'.$environment.'"}';
