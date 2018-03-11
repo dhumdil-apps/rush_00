@@ -1,34 +1,31 @@
-<?php
-	require('./src/php/connect.php');
-?>
+<?php require('./src/php/init.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Rush00 - PHP Piscine | Academy+Plus">
 
-	<title>Rush00 - PHP Piscine</title>
+	<!-- META TAGS -->
+	<?php require('./src/includes/meta_tags.php'); ?>
 
-	<!-- CSS -->
-	<?php include "./src/includes/links.php"?>
+	<title>ft_minishop</title>
+
+	<!-- Styles -->
+	<?php require('./src/includes/links.php'); ?>
+
 </head>
 <body>
 	<div class="page">
 
-		<?php include "./src/layouts/header_layout.php"; ?>
+		<?php require('./src/layouts/header_layout.php'); ?>
 
 		<div class="main">
-			<!-- TODO: read link and insert corresponding layout -->
-			<?php include "./src/layouts/XXX_layout.php"; ?>
+			<?php require($layout); ?>
 		</div>
 
-		<?php include "./src/layouts/footer_layout.php"; ?>
+		<?php require('./src/layouts/footer_layout.php'); ?>
 
     </div>
 
-	<!-- JavaScript -->
-	<?php include "./src/includes/scripts.php"?>
+	<!-- Scripts -->
+	<?php require('./src/includes/scripts.php'); ?>
 </body>
 </html>

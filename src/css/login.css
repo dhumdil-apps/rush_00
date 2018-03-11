@@ -1,5 +1,6 @@
 .login {
 	display: flex;
+	margin: auto;
 }
 .login .form .input {
 	font-size: 24px;
@@ -11,11 +12,18 @@
 	outline: none;
 	border: 1px solid #ddd;
 	font-size: 20px;
-	padding: 5px;
+	padding: 5px 20px;
 	margin: 0 5px;
+	text-align: center;
+}
+.login .form .input > input:focus {
+	border: 1px solid #bbb;
 }
 .login .form .input > label {
 	margin: auto 5px;
+}
+.login .form .input .password {
+	letter-spacing: 10px;
 }
 .login .form .invalid-input > input {
 	border: 1px solid rgba(200, 0, 0, .5);

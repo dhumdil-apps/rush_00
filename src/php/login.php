@@ -1,16 +1,13 @@
 <?php
 
-include 'dbh.php';
+	$login_errors = array();
 
-$uid = $_POST['uid'];
-$pwd = $_POST['pwd'];
+	if (isset($_POST['email']))
+	{
+		$_SESSION['email'] = $_POST['email'];
+	}
 
-$sql = "SELECT * FROM users WHERE uid='$uid' AND pwd='$pwd'";
-$result = mysqli_query($conn, $sql);
-
-if (!$row = mysqli_fetch_assoc($result)){
-    echo("Username or Password is incorrect!");
-    header("Location: ../../index.php");
-} else {
-    header("Location: ../htmlPages/main.html");
-}
+	if (isset($_POST['password']))
+	{
+		$_SESSION['password'] = $_POST['password'];
+	}
