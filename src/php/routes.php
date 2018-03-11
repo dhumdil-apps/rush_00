@@ -1,30 +1,19 @@
 <?php
 
-	$url = $_SERVER['REQUEST_URI'];
-	$file_path = $_SERVER['SCRIPT_FILENAME'];
-	$pattern = '/(.*)('. preg_replace('/(\/)/', '\/', $url) .')/';
+	$layout = '';
+	$route = '/';
 
-	// Redirect current path to root (Remove current path from route)
-	preg_match($pattern, $file_path, $matches);
-
-	if (isset($matches[0]))
+	if (isset($_POST['route']))
 	{
-		$url = preg_replace($pattern, '/', $file_path);
+		$route = '/'.$_POST['route'];
 	}
 
 	// API
-	$layout = '';
-
-	switch ($url)
+	switch ($route)
 	{
 
-		case '/':
-			$layout = './src/layouts/categories_layout.php';
-			require('./src/php/categories.php');
-			break;
-
 		// Categories
-		case '/index.php':
+		case '/':
 			$layout = './src/layouts/categories_layout.php';
 			require('./src/php/categories.php');
 			break;
