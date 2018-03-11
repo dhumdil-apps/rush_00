@@ -32,9 +32,16 @@
 
 		<div class="layout-row">
 			<div class="flex"></div>
-			<button class="btn submit" type="submit">
+			<button class="btn submit">
 				<span>Login</span>
 			</button>
+		</div>
+
+		<div class="layout-row input txt">
+			<div class="flex"></div>
+			<div class="layout-center" onclick="submitForm(event, 'mouse', 'register')">
+				<span>Register</span>
+			</div>
 		</div>
 
 	</form>

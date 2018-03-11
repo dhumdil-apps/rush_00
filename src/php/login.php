@@ -14,11 +14,13 @@
 		$email = $_POST['email'];
 		$_SESSION['email'] = $email;
 
-		if (!filter_var($email, FILTER_VALIDATE_EMAIL))
-		{
-			$login_errors['email'] = 'Email format is invalid.';
-		}
-		else
+		// if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+		// {
+		// 	$login_errors['email'] = 'Email format is invalid.';
+		// }
+		// else
+		// {
+		if(!empty($email))
 		{
 			$email = mysqli_real_escape_string($link, $email);
 			$sql = "SELECT id FROM users WHERE email='$email'";
@@ -33,10 +35,11 @@
 				$login_errors['email'] = 'Email is not in our database, please register first.';
 			}
 		}
+		// }
 	}
 	else
 	{
-		$login_errors['email'] = 'Enter an email.';
+		// $login_errors['email'] = 'Enter an email.';
 		$email_is_ok = 0;
 	}
 
@@ -73,8 +76,6 @@
 					$sql = "SELECT id FROM users WHERE password='$password'";
 					$result = sqlQuery($sql);
 
-					var_dump($password);
-
 					if (count(mysqli_fetch_all($result)) > 0)
 					{
 						$password_is_ok = 1;
@@ -87,7 +88,7 @@
 			}
 			else
 			{
-				$login_errors['password'] = 'Enter a password';
+				// $login_errors['password'] = 'Enter a password';
 			}
 		}
 	}

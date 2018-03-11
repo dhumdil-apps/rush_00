@@ -23,6 +23,10 @@ html, body {
 	 position: relative;
 	 height: 100px;
 }
+.space_sm {
+	position: relative;
+	height: 50px;
+}
 .layout-row {
 	display: flex;
 }

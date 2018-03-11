@@ -28,12 +28,9 @@
 
 	// CREATE USERS
 	function addUser($username, $email, $password, $address, $phone) {
-		$query = "INSERT INTO users (name, email, password, address, phone) VALUES ('".$username."', '".$email."', MD5('".$password."'), '".$password."', '".$phone."'),";
+		$query = "INSERT INTO users (name, email, password, address, phone) VALUES ('".$username."', '".$email."', '".$password."', '".$address."', '".$phone."')";
 		$rez = sqlQuery($query);
-		if(!$rez) {
-			$rez = "no users added";
-			return($rez);
-		}
+		return($rez);
 	}
 
 	// READ USERS
